@@ -477,7 +477,7 @@ try:
         # 3) Tracker Update
         tracks = tracker.update(det_arr, class_ids=np.array(cls_list) if cls_list else None)
 
-        # 4) 렌더링 / 캡처 / DB 저장
+        # 4) 렌더링 / 캡처 / DB 저장 / 경고음 재생
         now = time.time()
         active_ids = set()
         for t in tracks:
@@ -596,7 +596,7 @@ try:
         # === SCRIPT 1에서 병합된 클래스별 오디오 재생 로직 END ===
 
 
-        # 6) 출력
+        # 5) 출력
         # if display_local and display_local.IsStreaming():
         #     display_local.Render(img)
         #     display_local.SetStatus(f"{net.GetNetworkFPS():.0f} FPS | det_raw={len(dets)} | det_used={len(det_list)} | tracks={len(tracks)}")
